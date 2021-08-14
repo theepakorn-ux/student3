@@ -42,7 +42,7 @@
             <div class="collapse navbar-collapse" id="navbarColor03">
                 <ul class="navbar-nav mr-auto w-100 justify-content-end">
                     <li class="nav-item">
-                        <a class="nav-link" href="https://script.google.com/a/rmutsv.ac.th/macros/s/AKfycbzumjLL7ACA1G3coHoPVFUQSNONKNtIS1bmi8GP/exec"><i class="fas fa-home mr-2"></i> Main Menu</a>
+                        <a class="nav-link" href="https://script.google.com/macros/s/AKfycbw6toqDSbFzDMKFI9g7ZRFZ_Xjv7BTcHIUGj4s7dNBnspWbwYw/exec"><i class="fas fa-home mr-2"></i> Main Menu</a>
                     </li>
                 </ul>
             </div>
@@ -51,7 +51,7 @@
     <section>
     <br>
         <div class="container">
-            <div class="card text-black mb-12" style="max-width: 100rem; background-color: #BFC9CA">
+            <div class="card text-black mb-12" style="max-width: 100rem; background-color: #F559C1">
                 <h4 class="card-header prompt">Please follow the steps below :</h4>
                 <div class="card-body">
                     <p class="card-text mali">
@@ -73,41 +73,55 @@
        <form id="myForm" >
     <div class="row g-3">
       <div class="col-md-6">
-			<label >Please select your lecturer :</label>
+			<label >โปรดระบุอาจารย์ที่ปรึกษา :</label>
         <select name="myLecturer">
-          <option value="lecturer A">lecturer A</option>
-          <option value="lecturer B">lecturer B</option>
-          <option value="lecturer C">lecturer C</option>
-          <option value="lecturer D">lecturer D</option>
+          <option value="lecturer A">ผู้ช่วยศาสตราจารย์สันติพงศ์ ตั้งธรรมกุล</option>
+          <option value="lecturer B">ผู้ช่วยศาสตราจารย์พลอยกนก ขุนชำนาญ</option>
+          <option value="lecturer C">ผู้ช่วยศาสตราจารย์ชัยนันท์ ปัญญาวุทโส</option>
+          <option value="lecturer D">ผู้ช่วยศาสตราจารย์กัณฐณา สุขแก้ว</option>
+          <option value="lecturer D">ผู้ช่วยศาสตราจารย์ ดร.ธิดาภัทร อนุชาญ</option>
+          <option value="lecturer E">อาจารย์พัชรี ทิพย์ประชา</option>
+          <option value="lecturer E">อาจารย์ดนยรัตน์ คัคโนภาส</option>
+          <option value="lecturer E">อาจารย์ทีปกร นฤมาณนลินี</option>
+          <option value="lecturer E">อาจารย์รัสมนต์ ยุระพันธ์ุ</option>
+          <option value="lecturer E">อาจารย์จตุพร จิรันดร</option>
+          <option value="lecturer Z">อาจารย์อานนท์ บัวศรี</option>
         </select>
+        <p>
     </div>
     </div>
       <div class="col-md-3">
-          <label for="myleader" class="form-label">Student project leader :</label>
+          <label for="myleader" class="form-label">ขื่อหัวหน้าทีม :</label>
           <input type="text" class="form-control" name="myleader" id="myleader" required>
       </div>
       <div class="col-md-12">
-          <label for="myProjectTitle" class="form-label">Project Title : </label>
+          <label for="myProjectTitle" class="form-label">หัวข้อโครงงาน : </label>
           <input type="text" class="form-control" name="myProjectTitle" id="myProjectTitle" required>
       </div>
       <div class="col-md-3">
-          <label for="myNumGroup" class="form-label">Number of Members :</label>
+          <label for="myNumGroup" class="form-label">จำนวนสมาชิกในทีม :</label>
       </div>
       <div class="col-md-1">
           <input type="text" class="form-control" name="myNumGroup" id="myNumGroup" required>
       </div>
 
-      <div class="col-md-6">
-          <label for="myEmail" class="form-label">Email :</label>
+      <div class="col-md-3">
+          <label for="myEmail" class="form-label">อีเมลล์ :</label>
           <input type="email" class="form-control" name="myEmail" id="myEmail" required>
       </div>
-      <div class="col-md-6">
-          <label for="myFile" class="form-label">Choose your file :</label>
+
+      <div class="col-md-3">
+          <label for="myTelephone" class="form-label">เบอร์โทรศัพท์ติดต่อ :</label>
+          <input type="email" class="form-control" name="myTelephone" id="myTelephone" required>
+      </div>
+
+      <div class="col-md-3">
+          <label for="myFile" class="form-label">เลือกไฟล์อัพโหลด :</label>
           <input type="file" class="form-control" name="myFile" id="myFile" required>
       </div>
       <br>
           <input type="submit" class="btn btn-success btn-lg" value="submit"
-    onclick="this.value='กำลังอัพโหลดไฟล์...';
+    onclick="this.value='Uploading...';
       google.script.run.withSuccessHandler(fileUploaded)
       .uploadFiles(this.parentNode);
       return false;">
@@ -133,4 +147,5 @@
       })
     }
 </script>
+<!-- JavaScript from SweetAlert -->
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
