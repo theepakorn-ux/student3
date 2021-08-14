@@ -14,9 +14,7 @@ function uploadFiles(form) {
       folder = DriveApp.createFolder(folderDes);
     }
     var home = "https://script.google.com/macros/s/AKfycbw6toqDSbFzDMKFI9g7ZRFZ_Xjv7BTcHIUGj4s7dNBnspWbwYw/exec";
-    
-
-    
+       
     var file = folder.createFile(form.myFile);
         file.setSharing(DriveApp.Access.ANYONE_WITH_LINK, DriveApp.Permission.COMMENT);
     var url = file.getUrl()
