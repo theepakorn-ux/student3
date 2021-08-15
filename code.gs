@@ -5,7 +5,7 @@ function doGet(e) {
 function uploadFiles(form) {
   try {
 
-    var folderDes = "uploadData";
+    var folderDes = "uploadData";       // ระบุโฟลเดอร์ที่ต้องการเก็บไฟล์อัพโหลด
     var folder, folders = DriveApp.getFoldersByName(folderDes);
 
     if (folders.hasNext()) {
@@ -13,6 +13,7 @@ function uploadFiles(form) {
     } else {
       folder = DriveApp.createFolder(folderDes);
     }
+    // ระบุ Web App URL
     var home = "https://script.google.com/macros/s/AKfycbw6toqDSbFzDMKFI9g7ZRFZ_Xjv7BTcHIUGj4s7dNBnspWbwYw/exec";
        
     var file = folder.createFile(form.myFile);
@@ -24,6 +25,7 @@ function uploadFiles(form) {
     var numGroup = form.myNumGroup
     var email = form.myEmail
     var telephone = form.myTelephone
+    // ระบุ ID googleSheet
     var ss = SpreadsheetApp.openById("1Z-u9xN1q013Vin7TDLrK_X8auZwj1Ng0hirsiFc99cA");
     var sh = ss.getSheetByName('sheet1')
     ss.appendRow([new Date(), lecturer, leader, projectTitle, numGroup, email, telephone, url])
