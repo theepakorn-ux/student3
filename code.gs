@@ -5,7 +5,7 @@ function doGet(e) {
 function uploadFiles(form) {
   try {
 
-    var folderDes = "uploadData";       // ระบุโฟลเดอร์ที่ต้องการเก็บไฟล์อัพโหลด
+    var folderDes = "xxx";       // ระบุโฟลเดอร์ที่ต้องการเก็บไฟล์อัพโหลด
     var folder, folders = DriveApp.getFoldersByName(folderDes);
 
     if (folders.hasNext()) {
@@ -14,7 +14,7 @@ function uploadFiles(form) {
       folder = DriveApp.createFolder(folderDes);
     }
     // ระบุ Web App URL
-    var home = "https://script.google.com/macros/s/AKfycbw6toqDSbFzDMKFI9g7ZRFZ_Xjv7BTcHIUGj4s7dNBnspWbwYw/exec";
+    var home = "xxx";
        
     var file = folder.createFile(form.myFile);
         file.setSharing(DriveApp.Access.ANYONE_WITH_LINK, DriveApp.Permission.COMMENT);
@@ -26,8 +26,8 @@ function uploadFiles(form) {
     var email = form.myEmail
     var telephone = form.myTelephone
     // ระบุ ID googleSheet
-    var ss = SpreadsheetApp.openById("1Z-u9xN1q013Vin7TDLrK_X8auZwj1Ng0hirsiFc99cA");
-    var sh = ss.getSheetByName('sheet1')
+    var ss = SpreadsheetApp.openById("xxx");
+    var sh = ss.getSheetByName('xxx')
     ss.appendRow([new Date(), lecturer, leader, projectTitle, numGroup, email, telephone, url])
     return "ข้อมูลของ.." + leader + " ทำโปรเจ็คเรื่อง " + projectTitle+ " ได้ถูกอัพโหลดเข้าระบบเป็นที่เรียบร้อยแล้ว ขอบคุณครับ  <p><p><a href ='"+url+"' >คลิกดูงานที่ส่ง</a> <p><a href ='"+home+"' >กลับหน้าหลัก</a>"    
   } catch (error) {
